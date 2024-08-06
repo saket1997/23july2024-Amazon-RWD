@@ -110,6 +110,27 @@
     .modal-title{
         margin-top: 20px;
     }
+    .sprite{
+      width: 18px;
+      height: 12px;
+      background-image: url("./img/spritesheet.png");
+      background-position: -18px -36px;
+      background-repeat: no-repeat;
+    }
+    .s_submenu{
+      width: 300px;
+      height: 400px;
+      z-index: 1000;
+      top: 50px !important;
+      display: none;
+    }
+    .s_menu > li:hover > ul{
+      display: block;
+    }
+    .s_slider_control1,.s_slider_control2{
+      border: 5px solid #008296;
+
+    }
  
 </Style>
 <body>
@@ -191,7 +212,53 @@
         </div>
     </div>
     <header class="s_tbdr">
-        <div class="">Header-Top</div>
+        <div class="s_tbdr">
+          <div class="row m-0 s_tbdr h-100">
+            <div class="col-3 p-0 s_tbdr h-100">
+              <!-- <img src="./img/amazon_PNG28.png" width="100" alt="logo" style="margin-left: 10px; margin-top: 5px;"> -->
+            <ul class="nav nav-pills h-100 ">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+              <img src="./img/amazon_PNG28.png" width="100" alt="logo">
+                
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Location</a>
+            </li>
+            
+            </ul>
+            </div>
+            <div class="col-6 p-0 s_tbdr text-white h-100">B</div>
+            <div class="col-3 p-0">
+              <ul class="nav s_menu">
+                <li class="nav-item position-relative">
+                  <a class="nav-link text-white">
+                    <span class="sprite d-inline-block"></span>
+                    EN<i class="fa-solid fa-caret-down"></i></a>
+                    <ul class="nav s_submenu position-absolute top-0 start-0 bg-white">
+                      <li>
+                        <a href="#" class="nav-link"><input type="radio">English</a>
+                      </li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link">
+                    <span class="d-block text-white" style="font-size: 0.7em;">Hello, sign in</span>
+                    <span class="d-block text-white fw-bold">Account & Lists<i class="fa-solid fa-caret-down"></i></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">C
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
         <div class="container-fluid">
             <ul class="nav">
                 <li class="nav-item">
@@ -256,20 +323,85 @@
                             <img src="./img/Slide8.jpg" class="d-block w-100" alt="...">
                           </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <button class="carousel-control-prev s_slider_control1 rounded-end" style="height: 251px; width: 81px;" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                          <i class="fa-solid fa-chevron-left"></i>
                           <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <button class="carousel-control-next s_slider_control2 rounded-start" style="height: 251px; width: 81px;" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                          <i class="fa-solid fa-chevron-right"></i>
                           <span class="visually-hidden">Next</span>
                         </button>
                       </div> 
                     
                 </div>
-                <div class="s_tbdr s_main2"> main2</div>
-                <div class="s_tbdr s_main3"> main3</div>
-                <div class="s_tbdr s_main4"> main4</div>
+            <div class="s_tbdr ps-3 pe-3 position-relative" style="z-index: 1000;">
+                <div class="s_tbdr s_main2 position-relative" style="z-index: 1000;"> 
+                  <div class="row m-0 s_tbdr h-100 pb-2">
+                    <div class="col-3 p-0 s_tbdr bg-white pt-2 pb-2">A</div>
+                    <div class="col-3 s_tbdr  bg-white pt-2 pb-2">B</div>
+                    <div class="col-3 s_tbdr bg-white pt-2 pb-2">C</div>
+                    <div class="col-3 s_tbdr bg-white pt-2 pb-2">
+                      <div class="s_tbdr h-50">A</div>
+                      <div class="s_tbdr h-50 ms-4 me-4 mt-2">B</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s_tbdr s_main3"> 
+                  <div class="row m-0 s_tbdr h-100 pb-2">
+                    <div class="col-3 p-0 s_tbdr bg-white pt-2 pb-2 pe-2">
+                      <div class="s_tbdr h-100 bg-white">A-inside</div>  
+                    </div>
+                    <div class="col-3 s_tbdr  bg-white pt-2 pb-2">
+                      <div class="s_tbdr h-100 bg-white">B-inside</div>  
+                    </div>
+                    <div class="col-3 s_tbdr bg-white pt-2 pb-2">
+                      <div class="s_tbdr h-100 bg-white">C-inside</div>  
+                    </div>
+                    <div class="col-3 p-0 s_tbdr bg-white pt-2 pb-2 ps-2">
+                      <div class="s_tbdr h-100 bg-white">D-inside</div>  
+                    </div>
+                  </div>
+                </div>
+                <div class="s_tbdr s_main4 bg-white mt-2 mb-2 p-4">
+                  <div class="container-fluid h-100"> 
+                    <div id="carouselExampleControls2" class="carousel slide h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner h-100">
+                      <div class="carousel-item active h-100 s_tbdr">
+                        <span class="fs-4 fw-bold">Today's Deal</span>
+                          <a href="#">Discover al deals</a>
+                          <div class="row m-0 h-100">
+                            <div class="col-3 p-5 bg-white">
+                            <img src="https://m.media-amazon.com/images/I/31f6BjxJ7cL._SR480,440_.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-3 p-5 bg-white">
+                            <img src="https://m.media-amazon.com/images/I/31f6BjxJ7cL._SR480,440_.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-3 p-5 bg-white">
+                            <img src="https://m.media-amazon.com/images/I/31f6BjxJ7cL._SR480,440_.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-3 p-5 bg-white">
+                            <img src="https://m.media-amazon.com/images/I/31f6BjxJ7cL._SR480,440_.jpg" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                      </div>
+                      <div class="carousel-item s_tbdr h-100">
+                        <img src="https://m.media-amazon.com/images/I/21Hz57CBGJL._SR480,440_.jpg" class="d-block w-25 " alt="...">
+                      </div>
+                      <div class="carousel-item h-100 ">
+                        <img src="https://m.media-amazon.com/images/I/31SOygUjpUL._SR480,440_.jpg" class="d-block w-25 " alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev  bg-danger rounded-1 top-50 start-25 translate-middle-y" style="height: 100px; width: 56px; opacity: 1;" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next bg-danger rounded-1 top-50 end-25 translate-middle-y" style="height: 100px; width: 56px; opacity: 1;" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+                  </div>
+                </div>
                 <div class="s_tbdr s_main5"> main5</div>
                 <div class="s_tbdr s_main6"> main6</div>
                 <div class="s_tbdr s_main7"> main7</div>
@@ -285,8 +417,10 @@
                 <div class="s_tbdr s_main13"> main13</div>
                 <div class="s_tbdr s_main14"> main14</div>
             </div>
+          </div>
         </div>
-        <div class="s_tbdr s_main15"> main15</div>
+              <div class="s_tbdr s_main15"> main15</div>
+      
         
     </main>
     <footer class="s_tbdr text-white">
